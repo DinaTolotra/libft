@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:35:05 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 16:14:58 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:24:27 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif // LIBFT_H
