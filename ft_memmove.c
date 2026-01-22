@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 09:26:08 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:42:31 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 21:41:43 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 /*
 int	main(void)
 {
-	char	*str;
+	char	str[20];
 
-	str = strdup("Hello world");
+	strcpy(str, "Hello world");
 	printf("before:\t[%s]\n", str);
 	ft_memmove(str + 7, str + 1, 3);
 	puts("dest = str + 7\tsrc = str + 1\tn = 3");
 	printf("after:\t[%s]\n", str);
-	free(str);
 	return (0);
 }
 */

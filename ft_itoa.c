@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:40:56 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 19:13:55 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 21:35:34 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int	main(void)
 
 	str = ft_itoa(-2147483648);
 	printf("[%s]", str);
+	free(str);
 	return (0);
 }
 */

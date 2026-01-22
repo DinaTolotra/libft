@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:17:33 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 16:24:18 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 22:32:21 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len = ft_strlen(s1) + ft_strlen(s2);
 	res = malloc(sizeof(char) * (len + 1));
-	if (res) {
+	if (res)
+	{
 		ft_strlcat(res, s1, len + 1);
 		ft_strlcat(res, s2, len + 1);
 	}

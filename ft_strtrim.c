@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 16:47:44 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 22:32:32 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	index = 0;
 	len = ft_strlen(s1);
 	res = malloc(sizeof(char) * len);
-	while (s1[index]) {
+	while (s1[index])
+	{
 		if (ft_strchr(set, s1[index]) == 0)
 		{
 			res[res_i] = s1[index];

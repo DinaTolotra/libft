@@ -6,11 +6,11 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 15:57:18 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 16:16:18 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 22:31:23 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "./libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
