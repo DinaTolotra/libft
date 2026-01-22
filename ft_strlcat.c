@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:13 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 11:07:40 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:30:47 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,6 @@
 //#include <string.h>
 //#include <bsd/string.h>
 //#include <stdio.h>
-
-static int	ft_strlen(const char *s)
-{
-	int	index;
-
-	index = 0;
-	while (s[index])
-		index++;
-	return (index);
-}
 
 int	ft_strlcat(char *dst, const char *src, int size)
 {

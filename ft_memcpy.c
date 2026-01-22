@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:59:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 13:13:39 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:33:08 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //#include <string.h>
 //#include <stdio.h>
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int	index;
 
@@ -45,7 +45,7 @@ int	main(void)
 	}
 	putchar('\n');
 	index = 0;
-	memcpy(buff2, buff1, len);
+	ft_memcpy(buff2, buff1, len);
 	while (index < len)
 	{
 		printf("%i ", buff2[index]);

@@ -6,11 +6,12 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 13:51:20 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:04:06 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:36:44 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
+#include "./libft.h"
 
 static int	ft_isspace(int c)
 {
@@ -20,11 +21,6 @@ static int	ft_isspace(int c)
 static int	ft_issign(int c)
 {
 	return (c == '-' || c == '+');
-}
-
-static int	ft_isdigit(int c)
-{
-	return (c >= '0' && c <= '9');
 }
 
 int	ft_atoi(const char *nptr)

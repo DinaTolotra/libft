@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:50:59 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 12:58:12 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:26:05 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //#include <string.h>
 //#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, int n)
 {
 	int	index;
 

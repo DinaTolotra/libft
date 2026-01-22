@@ -6,22 +6,12 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 10:33:03 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 14:30:36 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 //#include <stdio.h>
-
-static int	ft_strlen(const char *s)
-{
-	int	index;
-
-	index = 0;
-	while (s[index])
-		index++;
-	return (index);
-}
 
 char	*ft_strdup(const char *s)
 {
