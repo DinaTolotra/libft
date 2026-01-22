@@ -6,13 +6,14 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:59:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:33:08 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:16:22 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdlib.h>
 //#include <string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

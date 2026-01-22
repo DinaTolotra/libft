@@ -6,15 +6,14 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:04:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:27:23 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:15:57 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-#include <stdlib.h>
 #include "./libft.h"
 
-void	*ft_calloc(size_t nmemb, int size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*res;
 

@@ -6,12 +6,13 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:45:21 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 11:42:41 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:17:24 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:13 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:30:47 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:17:02 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 //#include <string.h>
 //#include <bsd/string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
-int	ft_strlcat(char *dst, const char *src, int size)
+int	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	int	dst_i;
 	int	src_i;
@@ -24,9 +25,9 @@ int	ft_strlcat(char *dst, const char *src, int size)
 	dst_i = 0;
 	src_i = 0;
 	length = ft_strlen(dst) + ft_strlen(src);
-	while (dst[dst_i] && dst_i < (size - 1))
+	while (dst[dst_i] && dst_i < (int)(size - 1))
 		dst_i++;
-	while (src[src_i] && (dst_i + src_i) < (size - 1))
+	while (src[src_i] && (dst_i + src_i) < (int)(size - 1))
 	{
 		dst[dst_i + src_i] = src[src_i];
 		src_i++;

@@ -6,12 +6,13 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 13:33:02 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 13:50:34 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:16:19 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

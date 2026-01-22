@@ -6,11 +6,12 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:31:52 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 09:52:18 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:17:39 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
+#include "./libft.h"
 
 static int	ft_islower(int c)
 {

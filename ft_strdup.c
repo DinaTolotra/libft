@@ -6,12 +6,13 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:30:36 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:16:52 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 //#include <stdio.h>
+#include "./libft.h"
 
 char	*ft_strdup(const char *s)
 {

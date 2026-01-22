@@ -6,19 +6,20 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:45:34 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 11:36:01 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:18:34 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int	index;
 
 	index = 0;
-	while (index < (n - 1) && s1[index] && s1[index] == s2[index])
+	while (index < (int)(n - 1) && s1[index] && s1[index] == s2[index])
 		index++;
 	return (s1[index] - s2[index]);
 }

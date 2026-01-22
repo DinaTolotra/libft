@@ -6,15 +6,16 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:50:59 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:26:05 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:15:43 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdlib.h>
 //#include <string.h>
 //#include <stdio.h>
+#include "./libft.h"
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	int	index;
 
