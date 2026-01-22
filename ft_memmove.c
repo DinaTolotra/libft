@@ -6,11 +6,10 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 09:26:08 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:16:25 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:42:31 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
 //#include <string.h>
 //#include <stdio.h>
 #include "./libft.h"

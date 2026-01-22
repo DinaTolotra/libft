@@ -6,11 +6,10 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:13 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:17:02 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:42:42 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
 //#include <string.h>
 //#include <bsd/string.h>
 //#include <stdio.h>
