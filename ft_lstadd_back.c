@@ -10,10 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#include <stdio.h>
 #include "./libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	new->next = (*lst)->next;
-	(*lst)->next = new;
+	t_list	*last;
+
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
+
+/*
+int	main(void)
+{
+	t_list	*lst;
+	t_list	*last;
+	t_list	*t;
+	int		index;
+	int		len;
+
+	len = 5;
+	index = 1;
+	lst = ft_lstnew(0);
+	while (index < len)
+	{
+		ft_lstadd_front(&lst, ft_lstnew(0));
+		index++;
+	}
+	last = ft_lstnew(0);
+	ft_lstadd_back(&lst, last);
+	printf("%i\n", ft_lstlast(lst) == last);
+	while (lst)
+	{
+		t = lst;
+		lst = lst->next;
+		free(t);
+	}
+	return (0);
+}
+*/
