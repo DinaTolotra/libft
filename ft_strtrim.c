@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 20:43:55 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 20:45:40 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		res_len;
 	int		start;
 
+	if (s1 == 0 || set == 0)
+		return (0);
 	s_len = ft_strlen(s1);
 	start = first_not_in(s1, set);
 	res_len = last_not_in(s1, set);
