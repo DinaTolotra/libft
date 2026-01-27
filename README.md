@@ -41,6 +41,7 @@ Set of function to test and manipulate non-null-terminated string or memory area
 | :------- | :----: | :---------- |
 | ft_bzero | void | fill a memory area with 0 |
 | ft_strnstr | char * | find the first occurence of a string in an another string |
+| ft_memset | void * | fill a memory area with a value passed as a parameter |
 | ft_memchr | void * | find the first ocurence of a value in a memory are |
 | ft_memcmp | int | compare two memory area |
 | ft_memcpy | void * | copy a memory area to an another |
@@ -90,9 +91,41 @@ typedef struct s_list
 
 | function | return | description |
 | :------- | :----: | :---------- |
-
+| ft_lstnew | t_list * | create a new node with content passed as a parameter |
+| ft_lstadd_front | void | add a node to the front of a list |
+| ft_lstsize | int | count the number of node in a list |
+| ft_lstlast | t_list * | get the last node in a list |
+| ft_lstadd_back | void | add a node to the back of a list |
+| ft_lstdelone | void | free a node with its content |
+| ft_lstclear | void | free every node in a list |
+| ft_lstiter | void | apply a function to each node in a list |
+| ft_lstmap | t_list * | create a new list by applying a function to each node of an another list |
 
 ## INSTRUCTIONS
+
+### Compiling the library libft.a
+```shell
+make libft.a
+# or
+make all
+```
+
+### Compiling a specific objec file
+```shell
+make <filename>.o
+```
+
+### Cleaning
+```shell
+make clean
+# or
+make fclean
+```
+
+### Clean and recompile
+```shell
+make re
+```
 
 ## RESSOURCES
 
