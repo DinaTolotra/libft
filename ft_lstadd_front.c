@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 23:03:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 23:10:03 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 22:28:14 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	new->next = *lst;
+	if (new)
+		new->next = *lst;
 	(*lst) = new;
 }
 
