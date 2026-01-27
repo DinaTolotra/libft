@@ -6,24 +6,25 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:16:33 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:24:18 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <string.h>
 #include "./libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	index;
+	int		index;
+	char	*res;
 
+	res = 0;
 	index = 0;
-	while (s[index] && s[index] != c)
+	while (s[index] && s[index] != (char)c)
 		index++;
-	if (s[index])
-		return ((char *)(s + index));
-	return (0);
+	if (s[index] == (char)c)
+		res = ((char *)(&s[index]));
+	return (res);
 }
 
 /*
@@ -34,7 +35,7 @@ int	main(void)
 
 	c = 'o';
 	str = "Hello world";
-	printf("[%c] found in [%s] at [%li]\n", c, str, ft_strchr(str, c) - str);
+	printf("[%c] found in [%s] at [%p]\n", c, str, ft_strchr(str, c));
 	return (0);
 }
 */
