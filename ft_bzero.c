@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:50:59 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:33:48 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 13:37:37 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
-	while (index < (int)n)
+	while (index < n)
 	{
 		((char *)s)[index] = 0;
 		index++;
