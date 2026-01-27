@@ -6,12 +6,37 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:40:56 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 21:35:34 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:35:04 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 #include "./libft.h"
+
+static int	ft_abs(long lnb)
+{
+	if (lnb < 0)
+		return (-lnb);
+	return (lnb);
+}
+
+static int	char_count(long lnb)
+{
+	int	count;
+
+	count = 1;
+	if (lnb < 0)
+		count++;
+	lnb = ft_abs(lnb);
+	while (lnb)
+	{
+		lnb /= 10;
+		count++;
+	}
+	if (count == 1)
+		count++;
+	return (count);
+}
 
 static void	swap(char *a, char *b)
 {
@@ -41,8 +66,10 @@ char	*ft_itoa(int n)
 
 	lnb = n;
 	beg = 0;
-	res = malloc(sizeof(char) * 12);
-	res[0] = '0';
+	printf("\n[%i] [%i]\n", char_count(lnb), n);
+	res = malloc(sizeof(char) * char_count(lnb));
+	if (lnb == 0)
+		res[beg++] = '0';
 	if (lnb < 0)
 	{
 		lnb = -lnb;
