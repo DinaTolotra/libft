@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 21:59:58 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 14:20:12 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	dst = 0;
 	index = 0;
 	s_len = ft_strlen(s);
-	dst = malloc(sizeof(char) * s_len);
+	dst = malloc(sizeof(char) * (s_len + 1));
 	if (dst == 0)
 		return (0);
 	while (s[index])
@@ -30,6 +30,7 @@ char	*ft_strdup(const char *s)
 		dst[index] = s[index];
 		index++;
 	}
+	dst[index] = 0;
 	return (dst);
 }
 
