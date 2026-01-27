@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:13 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 10:04:56 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 14:55:53 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,29 @@ int	ft_strlcat(char *dst, const char *src, size_t size)
 	dst_len = ft_strlen(dst);
 	if (dst_len > size)
 		dst_len = size;
-	if (size == 0)
-		return (src_len + dst_len);
-	while (dst_i < size - 1 && dst[dst_i] )
-		dst_i++;
-	while ((dst_i + src_i) < size - 1 && src[src_i])
+	if (size > 0)
 	{
-		dst[dst_i + src_i] = src[src_i];
-		src_i++;
+		while (dst_i < size - 1 && dst[dst_i])
+			dst_i++;
+		while ((dst_i + src_i) < size - 1 && src[src_i])
+		{
+			dst[dst_i + src_i] = src[src_i];
+			src_i++;
+		}
+		if (dst_len < size)
+			dst[dst_i + src_i] = 0;
 	}
-	if (dst_len < size)
-		dst[dst_i + src_i] = 0;
 	return (src_len + dst_len);
 }
 
 /*
 int	main(void)
 {
-	char	str[20];
-	int		ret;
+	char	*res;
 
-	strcpy(str, "Hello ");
-	ret = strlcat(str, "world", 20);
-	printf("str: [%s]\tret: [%i]\n", str, ret);
-	strcpy(str, "Hello ");
-	ret = ft_strlcat(str, "world", 20);
-	printf("str: [%s]\tret: [%i]\n", str, ret);
+	res = 0;
+	res = calloc(sizeof(char), (20));
+	ft_strlcat(res, "Hello", 20);
 	return (0);
 }
 */
