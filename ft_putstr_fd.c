@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 20:08:47 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 20:09:51 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 22:25:55 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	index;
 
 	index = 0;
-	while (s[index])
+	while (s && s[index])
 	{
 		ft_putchar_fd(s[index], fd);
 		index++;
