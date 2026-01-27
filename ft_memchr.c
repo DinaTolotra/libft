@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 13:14:56 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:16:16 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:03:00 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
-	while (index < (int)n && ((char *)s)[index] != (char)c)
+	while (index < n)
+	{
+		if (((char *)s)[index] == (char)c)
+			return ((char *)s + index);
 		index++;
-	if (((char *)s)[index] == (char)c)
-		return ((char *)s + index);
+	}
 	return (0);
 }
 
