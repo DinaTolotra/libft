@@ -6,59 +6,61 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 16:32:07 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 20:43:55 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 #include "./libft.h"
 
-static int	count_leftchar(char const *s, char const *set)
+static int	first_not_in(const char *s, const char *set)
 {
-	int	count;
 	int	index;
-	int	set_i;
-	int	valid;
+	int	stop;
 
-	count = 0;
+	stop = 0;
 	index = 0;
-	while (s[index])
+	while (!stop && s[index])
 	{
-		set_i = 0;
-		valid = 1;
-		while (set[set_i] && valid == 1)
-		{
-			if (set[set_i] == s[index])
-				valid = 0;
-			set_i++;
-		}
-		count = count + valid;
-		index++;
+		if (ft_strchr(set, s[index]) == 0)
+			stop = 1;
+		else
+			index++;
 	}
-	return (count);
+	return (index);
+}
+
+static int	last_not_in(const char *s, const char *set)
+{
+	int	index;
+	int	stop;
+
+	stop = 0;
+	index = ft_strlen(s) - 1;
+	while (!stop && index > 0)
+	{
+		if (ft_strchr(set, s[index]) == 0)
+			stop = 1;
+		else
+			index--;
+	}
+	return (index);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	int		index;
-	int		res_i;
-	int		len;
+	int		s_len;
+	int		res_len;
+	int		start;
 
-	res_i = 0;
-	index = 0;
-	len = count_leftchar(s1, set);
-	res = malloc(sizeof(char) * (len + 1));
-	while (s1[index])
-	{
-		if (ft_strchr(set, s1[index]) == 0)
-		{
-			res[res_i] = s1[index];
-			res_i++;
-		}
-		index++;
-	}
-	res[res_i] = 0;
+	s_len = ft_strlen(s1);
+	start = first_not_in(s1, set);
+	res_len = last_not_in(s1, set);
+	res_len = res_len - start + 1;
+	if (res_len < 0)
+		res_len = 0;
+	res = ft_substr(s1, start, res_len);
 	return (res);
 }
 
