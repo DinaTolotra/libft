@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 23:35:09 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 23:37:46 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:50:48 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last;
-
-	last = ft_lstlast(*lst);
-	last->next = new;
+	if (*lst == 0)
+		*lst = new;
+	else
+		ft_lstlast(*lst)->next = new;
 }
 
 /*
