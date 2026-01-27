@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:13 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:42:42 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 10:04:56 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,29 @@
 
 int	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	dst_i;
-	int	src_i;
-	int	length;
+	size_t	dst_i;
+	size_t	src_i;
+	size_t	dst_len;
+	size_t	src_len;
 
 	dst_i = 0;
 	src_i = 0;
-	length = ft_strlen(dst) + ft_strlen(src);
-	while (dst[dst_i] && dst_i < (int)(size - 1))
+	src_len = ft_strlen(src);
+	dst_len = ft_strlen(dst);
+	if (dst_len > size)
+		dst_len = size;
+	if (size == 0)
+		return (src_len + dst_len);
+	while (dst_i < size - 1 && dst[dst_i] )
 		dst_i++;
-	while (src[src_i] && (dst_i + src_i) < (int)(size - 1))
+	while ((dst_i + src_i) < size - 1 && src[src_i])
 	{
 		dst[dst_i + src_i] = src[src_i];
 		src_i++;
 	}
-	dst[dst_i + src_i] = 0;
-	return (length);
+	if (dst_len < size)
+		dst[dst_i + src_i] = 0;
+	return (src_len + dst_len);
 }
 
 /*
