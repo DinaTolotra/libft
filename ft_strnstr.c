@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:45:46 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 13:22:03 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:51:15 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	index = 0;
 	little_len = ft_strlen(little);
 	if (little_len == 0)
-		return (char *)(big);
+		return ((char *)(big));
 	if (len == 0)
 		return (0);
 	while (index <= (len - little_len) && big[index] && res == 0)

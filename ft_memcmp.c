@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 13:33:02 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 11:58:05 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 18:50:45 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	print_mem(const void *p, size_t n)
 	index = 0;
 	while (index < n)
 	{
-		printf("[%i] ", *(char*)(p + index));
+		printf("[%i] ", ((char *)p)[index]);
 		index++;
 	}
 }
@@ -35,7 +35,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	index = 0;
 	while (res == 0 && index < n)
 	{
-		res = ((unsigned char*)s1)[index] - ((unsigned char*)s2)[index];
+		res = ((unsigned char *)s1)[index] - ((unsigned char *)s2)[index];
 		index++;
 	}
 	return (res);
