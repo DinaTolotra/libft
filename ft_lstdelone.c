@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 23:34:02 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 23:37:57 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 22:30:31 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+	if (del && lst)
+		del(lst->content);
+	if (lst)
+		free(lst);
 }
