@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:24:21 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 22:23:57 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 22:21:55 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		index;
 
 	index = 0;
+	if (s == 0 || f == 0)
+		return (0);
 	len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
 	while (s[index])
