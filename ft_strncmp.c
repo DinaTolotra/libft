@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:45:34 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 11:32:52 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 13:06:35 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	index = 0;
 	while (index < n && (s1[index] || s2[index]) && res == 0)
 	{
-		if (s1[index] != s2[index])
-			res = (s1[index] - s2[index]);
+		res = (s1[index] - s2[index]);
 		index++;
 	}
 	return (res);
