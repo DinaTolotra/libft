@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:40:56 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 15:35:04 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:00:43 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,6 @@ char	*ft_itoa(int n)
 
 	lnb = n;
 	beg = 0;
-	printf("\n[%i] [%i]\n", char_count(lnb), n);
 	res = malloc(sizeof(char) * char_count(lnb));
 	if (lnb == 0)
 		res[beg++] = '0';
