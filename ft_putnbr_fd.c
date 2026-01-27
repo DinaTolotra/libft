@@ -6,11 +6,12 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 20:12:35 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 21:07:16 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:43:27 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <fcntl.h>
+#include <stdio.h>
 #include "./libft.h"
 
 static void	_putnbr_fd_rec(long lnb, int fd)
@@ -25,15 +26,16 @@ void	ft_putnbr_fd(int n, int fd)
 	long	lnb;
 
 	lnb = n;
+	printf("\n[%i] [%i]\n", n, fd);
 	if (lnb < 0)
 	{
 		lnb = -lnb;
 		ft_putchar_fd('-', fd);
 	}
-	if (lnb)
+	if (lnb > 0)
 		_putnbr_fd_rec(lnb, fd);
 	else
-		ft_putnbr_fd('0', fd);
+		ft_putchar_fd('0', fd);
 }
 
 /*
