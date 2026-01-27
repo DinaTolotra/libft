@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:45:46 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 22:28:13 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/27 13:22:03 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,21 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		index;
+	size_t	index;
 	char	*res;
-	int		little_len;
+	size_t	little_len;
 
 	res = 0;
 	index = 0;
 	little_len = ft_strlen(little);
-	while (index < (int)len && big[index] && res == 0)
+	if (little_len == 0)
+		return (char *)(big);
+	if (len == 0)
+		return (0);
+	while (index <= (len - little_len) && big[index] && res == 0)
 	{
 		if (ft_strncmp(&big[index], little, little_len) == 0)
-			res = (char *)(big + index);
+			res = &((char *)big)[index];
 		index++;
 	}
 	return (res);
