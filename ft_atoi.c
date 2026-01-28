@@ -6,12 +6,11 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 13:51:20 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 14:36:44 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 22:18:39 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	ft_isspace(int c)
 {
@@ -47,14 +46,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (lnb * sign);
 }
-
-/*
-int	main(void)
-{
-	char	*s;
-
-	s = " 	-+125a";
-	printf("[%s] to [%i]\n", s, ft_atoi(s));
-	return (0);
-}
-*/
