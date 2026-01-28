@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:31:38 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:16:13 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:38:43 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_isprint(int c)
 {
-	return ((c >= 33 && c <= 126) || (c >= 9 && c <= 13) || c == ' ');
+	return ((c >= 33 && c <= 126) || c == ' ');
 }
 
 /*
