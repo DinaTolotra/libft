@@ -6,29 +6,23 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:31:18 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:16:03 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:47:14 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
+
+static int	islower(int c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+static int	isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
+	return (islower(c) || isupper(c));
 }
-
-/*
-int	main(void)
-{
-	char	*str;
-
-	str = "he110 w0r1d!\1";
-	while (*str)
-	{
-		printf("[%c]\t%i\n", *str, ft_isalpha(*str));
-		str++;
-	}
-	return (0);
-}
-*/
