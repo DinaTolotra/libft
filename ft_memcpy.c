@@ -6,51 +6,21 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:59:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/22 15:42:27 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 21:05:15 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
-	while (index < (int)n)
+	while (index < n)
 	{
 		((char *)dest)[index] = ((char *)src)[index];
 		index++;
 	}
 	return (dest);
 }
-
-/*
-int	main(void)
-{
-	char	*buff1;
-	char	buff2[6];
-	int		index;
-	int		len;
-
-	len = 6;
-	index = 0;
-	buff1 = "ab\0cd";
-	while (index < len)
-	{
-		printf("%i ", buff1[index]);
-		index++;
-	}
-	putchar('\n');
-	index = 0;
-	ft_memcpy(buff2, buff1, len);
-	while (index < len)
-	{
-		printf("%i ", buff2[index]);
-		index++;
-	}
-	return (0);
-}
-*/
