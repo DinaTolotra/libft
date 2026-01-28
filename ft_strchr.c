@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:44:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 21:23:59 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 21:46:16 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int			index;
+	size_t		index;
 	const char	*res;
 
 	res = 0;
