@@ -4,7 +4,7 @@ of the 42 curriculum by **todina-r**.*
 # LIBFT
 
 ## DESCRIPTION
-libtf is a personal c library. It contains a re-implementaion of several common function from `glibc` and `libbsd` and some utility function aboit file io and linked list. It is meant to be used on a linux OS due to some system call.
+libtf is a personal c library. It contains a re-implementaion of several common function from `glibc` and `libbsd` and some utility function about file io and linked list. It is meant to be used on a linux OS.
 
 ### Prototypes
 #### From ctype.h
@@ -102,6 +102,7 @@ typedef struct s_list
 | ft_lstmap | t_list * | create a new list by applying a function to each node of an another list |
 
 ## INSTRUCTIONS
+this project use the make build tool. The file `makefile` contain instruction for the make tool.
 
 ### Compiling the library libft.a
 ```shell
@@ -110,16 +111,16 @@ make libft.a
 make all
 ```
 
-### Compiling a specific objec file
+### Compiling a specific object file
 ```shell
-make <filename>.o
+make <filename>.o # eg: make ft_strlen.o
 ```
 
 ### Cleaning
 ```shell
-make clean
+make clean # to remove object file
 # or
-make fclean
+make fclean # to remove object file and libft.a
 ```
 
 ### Clean and recompile
@@ -127,7 +128,9 @@ make fclean
 make re
 ```
 
-## RESSOURCES
+## RESOURCES
 
 ### Documentations
+ - atoi behavior: man strtol(3)
  - printable character: https://www.ascii-code.com/characters/printable-characters
+ - strlcat more detailed documentation: https://pubs.opengroup.org/onlinepubs/9799919799/functions/strlcat.html
