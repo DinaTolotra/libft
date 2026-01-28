@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:04:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 14:16:18 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/28 17:49:34 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
+
+static int	overflow(size_t a, size_t b)
+{
+	return (a && (size_t)(a * b) / a != b);
+}
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -20,11 +23,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	full_size;
 
 	res = 0;
-	full_size = nmemb * size;
-	if (nmemb && size > SIZE_MAX / nmemb)
+	if (overflow(nmemb, size))
 		return (0);
+	full_size = nmemb * size;
+	if (full_size == 0)
+		full_size = 1;
 	res = malloc(full_size);
-	if (res)
+	if (res && full_size > 0)
 		ft_bzero(res, full_size);
 	return (res);
 }
