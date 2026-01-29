@@ -6,40 +6,22 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 19:40:57 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 22:23:28 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 12:18:46 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int		index;
 
 	index = 0;
+	if (s == 0 || f == 0)
+		return (0);
 	while (s && f && s[index])
 	{
 		f(index, s + index);
 		index++;
 	}
 }
-
-/*
-void	lower(unsigned int i, char *c)
-{
-	(void)(i);
-	*c = ft_tolower(*c);
-}
-
-int	main(void)
-{
-	char	*str;
-
-	str = ft_strdup("HellO");
-	ft_striteri(str, lower);
-	printf("[%s]\n", str);
-	free(str);
-	return (0);
-}
-*/
