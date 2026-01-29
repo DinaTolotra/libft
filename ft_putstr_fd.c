@@ -6,11 +6,11 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 20:08:47 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 22:25:55 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 12:22:39 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
