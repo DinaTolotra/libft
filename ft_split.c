@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:49:36 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/29 11:55:06 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 11:58:40 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	count = count_separated(s, c);
 	res = ft_calloc(sizeof(char *), (count + 1));
-	while (s[end] || beg != -1)
+	while (res && (s[end] || beg != -1))
 	{
 		if (s[end] != c && beg == -1)
 			beg = end;
