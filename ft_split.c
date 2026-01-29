@@ -6,12 +6,11 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:49:36 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 21:22:36 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 11:55:06 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	count_separated(char const *s, char c)
 {
@@ -64,24 +63,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*str;
-	char	**res;
-	int		index;
-
-	index = 0;
-	str = "Hello world";
-	res = ft_split(str, ' ');
-	while (res[index])
-	{
-		printf("[%s]\n", res[index]);
-		free(res[index]);
-		index++;
-	}
-	free(res);
-	return (0);
-}
-*/
