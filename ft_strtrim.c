@@ -6,12 +6,11 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 20:45:40 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 11:55:35 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	first_not_in(const char *s, const char *set)
 {
@@ -65,17 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = ft_substr(s1, start, res_len);
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*org;
-	char	*res;
-
-	org = "Hello world";
-	res = ft_strtrim(org, "o ");
-	printf("[%s]\n", res);
-	free(res);
-	return (0);
-}
-*/
