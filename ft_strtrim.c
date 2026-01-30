@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	first_not_in(const char *s, const char *set)
 {
@@ -50,13 +49,11 @@ static int	last_not_in(const char *s, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	int		s_len;
 	int		res_len;
 	int		start;
 
 	if (s1 == 0 || set == 0)
 		return (0);
-	s_len = ft_strlen(s1);
 	start = first_not_in(s1, set);
 	res_len = last_not_in(s1, set);
 	res_len = res_len - start + 1;
@@ -65,17 +62,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res = ft_substr(s1, start, res_len);
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*org;
-	char	*res;
-
-	org = "Hello world";
-	res = ft_strtrim(org, "o ");
-	printf("[%s]\n", res);
-	free(res);
-	return (0);
-}
-*/
