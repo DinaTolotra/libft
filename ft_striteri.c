@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -24,22 +23,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		index++;
 	}
 }
-
-/*
-void	lower(unsigned int i, char *c)
-{
-	(void)(i);
-	*c = ft_tolower(*c);
-}
-
-int	main(void)
-{
-	char	*str;
-
-	str = ft_strdup("HellO");
-	ft_striteri(str, lower);
-	printf("[%s]\n", str);
-	free(str);
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:04:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 17:49:34 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/30 10:48:04 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,17 +33,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		ft_bzero(res, full_size);
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*buff;
-	int		index;
-
-	index = 0;
-	buff = ft_calloc(3, 18446744073709551611);
-	free(buff);
-	putchar('\n');
-	return (0);
-}
-*/
