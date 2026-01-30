@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	ft_abs(long lnb)
 {
@@ -38,61 +37,25 @@ static int	char_count(long lnb)
 	return (count);
 }
 
-static void	swap(char *a, char *b)
-{
-	char	t;
-
-	t = *a;
-	*a = *b;
-	*b = t;
-}
-
-static void	reverse(char *s, int beg, int end)
-{
-	while (beg < end)
-	{
-		swap(s + beg, s + end - 1);
-		beg++;
-		end--;
-	}
-}
-
 char	*ft_itoa(int n)
 {
 	long	lnb;
 	char	*res;
-	int		beg;
-	int		end;
+	int		count;
 
-	lnb = n;
-	beg = 0;
+	lnb = ft_abs(n);
+	count = char_count(lnb);
 	res = malloc(sizeof(char) * char_count(lnb));
-	if (lnb == 0)
-		res[beg++] = '0';
-	if (lnb < 0)
+	if (res == 0)
+		return (0);
+	res[0] = '0';
+	res[--count] = 0;
+	if (n < 0)
+		res[0] = '-';
+	while (lnb)
 	{
-		lnb = -lnb;
-		res[beg++] = '-';
+		res[--count] = (lnb % 10) + '0';
+		lnb /= 10;
 	}
-	end = beg;
-	while (lnb > 0)
-	{
-		res[end++] = (lnb % 10) + '0';
-		lnb = lnb / 10;
-	}
-	reverse(res, beg, end);
-	res[end] = 0;
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*str;
-
-	str = ft_itoa(-2147483648);
-	printf("[%s]", str);
-	free(str);
-	return (0);
-}
-*/
