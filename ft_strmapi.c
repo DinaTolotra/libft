@@ -10,20 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	int		len;
-	int		index;
+	size_t	index;
 
 	index = 0;
 	if (s == 0 || f == 0)
 		return (0);
 	len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
+	if (str == 0)
+		return (0);
 	while (s[index])
 	{
 		str[index] = f(index, s[index]);
@@ -32,21 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[index] = 0;
 	return (str);
 }
-
-/*
-char	lower(unsigned int i, char c)
-{
-	(void)(i);
-	return (ft_tolower(c));
-}
-
-int	main(void)
-{
-	char	*str;
-
-	str = ft_strmapi("HEllo", lower);
-	printf("[%s]\n", str);
-	free(str);
-	return (0);
-}
-*/
