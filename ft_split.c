@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include "./libft.h"
+#include "libft.h"
 
 static int	count_separated(char const *s, char c)
 {
@@ -51,7 +50,7 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	count = count_separated(s, c);
 	res = ft_calloc(sizeof(char *), (count + 1));
-	while (s[end] || beg != -1)
+	while (res && (s[end] || beg != -1))
 	{
 		if (s[end] != c && beg == -1)
 			beg = end;
@@ -64,24 +63,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-
-/*
-int	main(void)
-{
-	char	*str;
-	char	**res;
-	int		index;
-
-	index = 0;
-	str = "Hello world";
-	res = ft_split(str, ' ');
-	while (res[index])
-	{
-		printf("[%s]\n", res[index]);
-		free(res[index]);
-		index++;
-	}
-	free(res);
-	return (0);
-}
-*/
