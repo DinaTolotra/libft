@@ -9,7 +9,9 @@ The goal of this project is to gain a deeper understanding of C programming, mem
 
 This library is intended to be used on Linux systems.
 
-### Character classification (`ctype.h`)
+### Function
+
+#### Character classification (`ctype.h`)
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
@@ -21,9 +23,9 @@ This library is intended to be used on Linux systems.
 | ft_toupper | int | Convert a lowercase character to uppercase |
 | ft_tolower | int | Convert an uppercase character to lowercase |
 
-### String manipulation (`string.h`)
+#### String manipulation (`string.h`)
 
-#### Null-terminated strings
+##### Null-terminated strings
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
@@ -35,7 +37,7 @@ This library is intended to be used on Linux systems.
 | ft_strchr | char * | Locate first occurrence of a character |
 | ft_strrchar | char * | Locate last occurrence of a character |
 
-#### Memory manipulation
+##### Memory manipulation
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
@@ -47,14 +49,14 @@ This library is intended to be used on Linux systems.
 | ft_memcpy | void * | Copy memory area |
 | ft_memmove | void * | Copy memory area with overlap support |
 
-### Standard utilities (`stdlib.h`)
+#### Standard utilities (`stdlib.h`)
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
 | ft_calloc | void * | Allocate and zero-initialize memory |
 | ft_atoi | int | Convert string to integer |
 
-### Additional string utilities
+#### Additional string utilities
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
@@ -66,7 +68,7 @@ This library is intended to be used on Linux systems.
 | ft_strmapi | char * | Apply function to characters (new string) |
 | ft_striter | void | Apply function to characters (in place) |
 
-### File descriptors
+#### File descriptors
 
 | Function | Return | Description |
 | :------- | :----: | :---------- |
@@ -75,7 +77,7 @@ This library is intended to be used on Linux systems.
 | ft_putendl_fd | void | Write a string followed by a newline |
 | ft_putnbr_fd | void | Write an integer to a file descriptor |
 
-### Linked lists
+#### Linked lists
 
 ```c
 typedef struct s_list
@@ -117,7 +119,18 @@ make fclean
 make re
 ```
 
+### Usafe
+```sh
+cc -o <output> <main_file> -I<path_to_libft.h> -L<path_to_libft.a> -lft
+```
+
 ## Resources
+
+### Documentation
  - atoi behavior: man strtol(3)
  - Printable characters: https://www.ascii-code.com/characters/printable-characters
  - strlcat documentation: https://pubs.opengroup.org/onlinepubs/9799919799/functions/strlcat.html
+
+### AI
+ - Proof reading for README
+ - unit test code review during testing
