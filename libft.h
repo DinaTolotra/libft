@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:35:05 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 19:14:17 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/03 10:27:29 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-#endif // LIBFT_H
+#endif
