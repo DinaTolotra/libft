@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 23:48:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/29 23:02:33 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/03 07:19:19 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (0);
 	new_lst = ft_lstnew(f(lst->content));
 	last = new_lst;
+	lst = lst->next;
 	while (last && lst)
 	{
 		node = ft_lstnew(f(lst->content));
