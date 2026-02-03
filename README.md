@@ -105,6 +105,10 @@ This project uses make.
 ### Build the library
 ```sh
 make
+# or
+make all
+# or
+make libft.a
 ```
 ### Clean object files
 ```sh
@@ -119,7 +123,7 @@ make fclean
 make re
 ```
 
-### Usafe
+### Usage
 ```sh
 cc -o <output> <main_file> -I<path_to_libft.h> -L<path_to_libft.a> -lft
 ```
