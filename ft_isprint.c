@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 08:31:38 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/29 07:52:01 by todina-r         ###   ########.fr       */
+/*   Created: 2026/02/03 16:56:41 by todina-r          #+#    #+#             */
+/*   Updated: 2026/02/03 16:56:45 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
