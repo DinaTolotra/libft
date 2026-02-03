@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:26 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 21:07:56 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/31 12:46:30 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
-	int		len;
+	size_t	len;
 
 	index = 0;
-	len = ft_strlen(src);
-	if (size == 0)
-		return (len);
-	while (src[index] && index < size - 1)
+	while (index + 1 < size && src[index])
 	{
 		dst[index] = src[index];
 		index++;
 	}
-	dst[index] = 0;
+	if (size)
+		dst[index] = 0;
+	len = index;
+	while (src[len])
+		len++;
 	return (len);
 }

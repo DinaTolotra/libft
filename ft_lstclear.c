@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (*lst)
+	if (lst && *lst && del)
 	{
 		ft_lstclear(&((*lst)->next), del);
-		if (del)
-			del((*lst)->content);
+		del((*lst)->content);
 		free(*lst);
 		*lst = 0;
 	}

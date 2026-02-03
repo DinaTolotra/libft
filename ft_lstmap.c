@@ -6,23 +6,32 @@
 /*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 23:48:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/27 22:35:07 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/01/29 23:02:33 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	t_list	*new_lst;
+	t_list	*last;
 	t_list	*node;
 
-	node = 0;
-	if (lst)
+	if (lst == 0)
+		return (0);
+	new_lst = ft_lstnew(f(lst->content));
+	last = new_lst;
+	while (last && lst)
 	{
-		node = malloc(sizeof(t_list));
-		if (f)
-			node->content = f(lst->content);
-		node->next = ft_lstmap(lst->next, f, del);
+		node = ft_lstnew(f(lst->content));
+		if (node == 0)
+			ft_lstclear(&new_lst, del);
+		else if (last)
+			last->next = node;
+		lst = lst->next;
+		last = node;
+		node = 0;
 	}
-	return (node);
+	return (new_lst);
 }
