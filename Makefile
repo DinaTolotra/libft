@@ -52,7 +52,7 @@ SRCS = ft_isalnum.c\
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
-	$(AR) $@ $^
+	$(AR) $(NAME) $(OBJS)
 
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) -c $< -o $@
