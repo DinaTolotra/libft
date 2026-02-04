@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:26 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/31 12:46:30 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 07:01:32 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
 	size_t	len;
