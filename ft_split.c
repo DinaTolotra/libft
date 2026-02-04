@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:49:36 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/04 11:44:11 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 12:27:56 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	count_separated(char const *s, char c)
 {
 	int		count;
-	size_t	beg;
+	int		beg;
 	size_t	end;
 
 	end = 0;
@@ -40,7 +40,7 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		count;
 	size_t	res_i;
-	size_t	beg;
+	int		beg;
 	size_t	end;
 
 	end = 0;
