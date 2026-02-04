@@ -6,16 +6,16 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/04 05:42:12 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:22:23 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	first_not_in(const char *s, const char *set)
+static size_t	first_not_in(const char *s, const char *set)
 {
-	int	index;
-	int	stop;
+	size_t	index;
+	int		stop;
 
 	stop = 0;
 	index = 0;
@@ -29,10 +29,10 @@ static int	first_not_in(const char *s, const char *set)
 	return (index);
 }
 
-static int	last_not_in(const char *s, const char *set)
+static size_t	last_not_in(const char *s, const char *set)
 {
-	int	index;
-	int	stop;
+	size_t	index;
+	int		stop;
 
 	stop = 0;
 	index = ft_strlen(s) - 1;
@@ -49,9 +49,9 @@ static int	last_not_in(const char *s, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	int		res_len;
-	int		begin;
-	int		end;
+	size_t	res_len;
+	size_t	begin;
+	size_t	end;
 
 	if (s1 == 0 || set == 0)
 		return (0);

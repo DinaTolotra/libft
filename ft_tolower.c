@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:31:46 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 21:22:04 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:22:32 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 static int	ft_isupper(int c)
 {

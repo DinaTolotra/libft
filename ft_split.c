@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:49:36 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/29 11:58:40 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:44:11 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static int	count_separated(char const *s, char c)
 {
-	int	count;
-	int	beg;
-	int	end;
+	int		count;
+	size_t	beg;
+	size_t	end;
 
 	end = 0;
 	beg = -1;
@@ -39,9 +39,9 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		count;
-	int		res_i;
-	int		beg;
-	int		end;
+	size_t	res_i;
+	size_t	beg;
+	size_t	end;
 
 	end = 0;
 	beg = -1;

@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:35:05 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/04 07:00:43 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:34:04 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}				t_list;
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

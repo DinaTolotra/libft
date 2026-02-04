@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 08:43:51 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 22:19:45 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:20:20 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	int		index;
-	int		s_len;
+	size_t	index;
+	size_t	s_len;
 	char	*dst;
 
 	dst = 0;

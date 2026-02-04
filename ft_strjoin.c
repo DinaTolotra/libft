@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:17:33 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 22:34:35 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/04 11:20:57 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;
-	int		len;
+	size_t	len;
 
 	if (s1 == 0 || s2 == 0)
 		return (0);
