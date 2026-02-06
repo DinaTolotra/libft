@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:04:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/03 16:56:11 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/06 08:39:20 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (full_size == 0)
 		full_size = 1;
 	res = malloc(full_size);
-	if (res && full_size > 0)
+	if (res)
 		ft_bzero(res, full_size);
 	return (res);
 }
