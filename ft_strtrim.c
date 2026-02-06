@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 16:30:48 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/04 11:22:23 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/06 09:51:53 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
 static size_t	first_not_in(const char *s, const char *set)
 {
 	size_t	index;
-	int		stop;
 
-	stop = 0;
 	index = 0;
-	while (!stop && s[index])
+	while (s[index])
 	{
 		if (ft_strchr(set, s[index]) == 0)
-			stop = 1;
-		else
-			index++;
+			return (index);
+		index++;
 	}
 	return (index);
 }
@@ -32,16 +29,13 @@ static size_t	first_not_in(const char *s, const char *set)
 static size_t	last_not_in(const char *s, const char *set)
 {
 	size_t	index;
-	int		stop;
 
-	stop = 0;
-	index = ft_strlen(s) - 1;
-	while (!stop && index >= 0)
+	index = ft_strlen(s);
+	while (index > 0)
 	{
+		index--;
 		if (ft_strchr(set, s[index]) == 0)
-			stop = 1;
-		else
-			index--;
+			return (index);
 	}
 	return (index);
 }
