@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 12:59:15 by todina-r          #+#    #+#             */
-/*   Updated: 2026/01/28 21:05:15 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/06 08:47:53 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	index;
+	size_t		index;
+	char		*s_dest;
+	const char	*s_src;
 
 	index = 0;
+	s_dest = dest;
+	s_src = src;
 	while (index < n)
 	{
-		((char *)dest)[index] = ((char *)src)[index];
+		s_dest[index] = s_src[index];
 		index++;
 	}
 	return (dest);
