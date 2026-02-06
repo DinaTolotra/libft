@@ -102,6 +102,12 @@ typedef struct s_list
 ## Instructions
 This project uses make.
 
+### Clone the repository
+```sh
+git clone git@vogsphere.42antananarivo.mg:vogsphere/intra-uuid-c81ca723-a115-4325-8f8c-65e6d60b47f5-7227654-todina-r libft
+cd libft
+```
+
 ### Build the library
 ```sh
 make
@@ -110,22 +116,31 @@ make all
 # or
 make libft.a
 ```
+
 ### Clean object files
 ```sh
 make clean
 ```
+
 ### Clean object files and library
 ```sh
 make fclean
 ```
+
 ### Rebuild
 ```sh
 make re
 ```
 
-### Usage
+### Usage example
+In your source code:
+```c
+#include "libft.h"
+```
+
+In your terminal:
 ```sh
-cc -o <output> <main_file> -I<path_to_libft.h> -L<path_to_libft.a> -lft
+cc -o <output> <source_file> -I<path_to_libft.h> -L<path_to_libft.a> -lft
 ```
 
 ## Resources
