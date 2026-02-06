@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 09:26:08 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/05 05:36:17 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/06 08:36:17 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	index;
+	size_t		index;
+	char		*s_dest;
+	const char	*s_src;
 
+	s_dest = dest;
+	s_src = src;
 	if (dest < src)
 	{
 		index = 0;
 		while (index < n)
 		{
-			((char *)dest)[index] = ((char *)src)[index];
+			s_dest[index] = s_src[index];
 			index++;
 		}
 	}
 	else if (dest > src)
 	{
-		index = n - 1;
-		while (index >= 0)
+		while (n > 0)
 		{
-			((char *)dest)[index] = ((char *)src)[index];
-			index--;
+			n--;
+			s_dest[n] = s_src[n];
 		}
 	}
 	return (dest);
