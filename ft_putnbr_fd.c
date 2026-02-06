@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: todina-r <todina-r@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 20:12:35 by todina-r          #+#    #+#             */
-/*   Updated: 2026/02/03 07:10:07 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/02/06 08:50:38 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 		lnb = -lnb;
 		ft_putchar_fd('-', fd);
 	}
-	if (lnb > 0)
-		_putnbr_fd_rec(lnb, fd);
-	else
-		ft_putchar_fd('0', fd);
+	_putnbr_fd_rec(lnb, fd);
 }
