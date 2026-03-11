@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:35:05 by todina-r          #+#    #+#             */
-/*   Updated: 2026/03/11 07:17:36 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/03/11 09:42:59 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <stdarg.h>
+
+# define EOL_SPEC '\n'
+# define FD_MAX 1024
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# if BUFFER_SIZE <= 0
+#  error "BUFFER_SIZE must be greater than 0"
+# endif
+
 
 typedef struct s_list
 {
@@ -87,5 +99,13 @@ int		ft_putstr(const char *s);
 int		ft_putunb_base(uintptr_t nb, const char *b);
 int		ft_putlnb(long nb);
 int		ft_putunb(unsigned int nb);
+
+char	*get_next_line(int fd);
+
+size_t	ft_strlen(const char *s);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

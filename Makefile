@@ -61,7 +61,8 @@ SRCS = ft_isalnum.c\
 	ft_printf/ft_print_uint_l.c\
 	ft_printf/ft_print_lhex_l.c\
 	ft_printf/ft_print_uhex_l.c\
-	ft_printf/ft_printf.c
+	ft_printf/ft_printf.c\
+	gnl/gnl.c
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS) $(ST_LIBS)
