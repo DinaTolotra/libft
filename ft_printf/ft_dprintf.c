@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 11:08:57 by todina-r          #+#    #+#             */
-/*   Updated: 2026/03/24 08:23:24 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/03/24 08:41:03 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_dprintf(int fd, const char *f, ...)
 		if (f[index] == '%')
 			t_count = handle_conv(fd, f[++index], list);
 		else
-			t_count = ft_putchar_fd(fd, f[index]);
+			t_count = ft_putchar_fd(f[index], fd);
 		count += t_count;
 		if (t_count == -1)
 			count = -1;
