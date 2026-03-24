@@ -49,11 +49,9 @@ SRCS = ft_isalnum.c\
 	ft_lstclear.c\
 	ft_lstiter.c\
 	ft_lstmap.c\
-	ft_printf/ft_putunb_base.c\
-	ft_printf/ft_putchar.c\
-	ft_printf/ft_putstr.c\
-	ft_printf/ft_putlnb.c\
-	ft_printf/ft_putunb.c\
+	ft_printf/ft_putunb_base_fd.c\
+	ft_printf/ft_putlnb_fd.c\
+	ft_printf/ft_putunb_fd.c\
 	ft_printf/ft_print_char_l.c\
 	ft_printf/ft_print_str_l.c\
 	ft_printf/ft_print_ptr_l.c\
@@ -61,8 +59,8 @@ SRCS = ft_isalnum.c\
 	ft_printf/ft_print_uint_l.c\
 	ft_printf/ft_print_lhex_l.c\
 	ft_printf/ft_print_uhex_l.c\
-	ft_printf/ft_printf.c\
-	gnl/gnl.c
+	ft_printf/ft_dprintf.c\
+	gnl.c
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS) $(ST_LIBS)

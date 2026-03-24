@@ -6,7 +6,7 @@
 /*   By: todina-r <todina-r@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 14:35:05 by todina-r          #+#    #+#             */
-/*   Updated: 2026/03/11 09:42:59 by todina-r         ###   ########.fr       */
+/*   Updated: 2026/03/24 08:27:12 by todina-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 # if BUFFER_SIZE <= 0
 #  error "BUFFER_SIZE must be greater than 0"
 # endif
-
 
 typedef struct s_list
 {
@@ -69,8 +68,8 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
@@ -84,28 +83,20 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-int		ft_printf(const char *f, ...);
+int		ft_dprintf(int fd, const char *f, ...);
 
-int		ft_print_char_l(va_list list);
-int		ft_print_str_l(va_list list);
-int		ft_print_ptr_l(va_list list);
-int		ft_print_int_l(va_list list);
-int		ft_print_uint_l(va_list list);
-int		ft_print_lhex_l(va_list list);
-int		ft_print_uhex_l(va_list list);
+int		ft_print_char_l(int fd, va_list list);
+int		ft_print_str_l(int fd, va_list list);
+int		ft_print_ptr_l(int fd, va_list list);
+int		ft_print_int_l(int fd, va_list list);
+int		ft_print_uint_l(int fd, va_list list);
+int		ft_print_lhex_l(int fd, va_list list);
+int		ft_print_uhex_l(int fd, va_list list);
 
-int		ft_putchar(char c);
-int		ft_putstr(const char *s);
-int		ft_putunb_base(uintptr_t nb, const char *b);
-int		ft_putlnb(long nb);
-int		ft_putunb(unsigned int nb);
+int		ft_putunb_base_fd(uintptr_t nb, const char *b, int fd);
+int		ft_putlnb_fd(long nb, int fd);
+int		ft_putunb_fd(unsigned int nb, int fd);
 
 char	*get_next_line(int fd);
-
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
