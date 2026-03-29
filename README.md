@@ -2,115 +2,108 @@
 
 # Libft
 
-Custom C standard library implementation developed as part of the 42 curriculum.  
-This project consolidates fundamental utilities, along with extended functionality including `ft_printf` and `get_next_line`.
+---
+
+## Introduction
+
+`libft` is a custom implementation of the C standard library, extended with two key projects: `ft_printf` and `get_next_line`.
+
+The objective of this project is to build a reliable, reusable foundation of low-level utilities while strengthening understanding of memory management, data structures, and system-level programming.
+
+The library includes:
+- Reimplemented standard libc functions
+- Additional string and memory utilities
+- A linked list API
+- A custom formatted output system (`ft_printf`)
+- A line-by-line file reader (`get_next_line`)
+
+This library is intended to be reused across subsequent 42 projects.
 
 ---
 
-## Overview
+## Instruction
 
-This library provides reimplementations of standard C functions, as well as additional tools for memory management, string manipulation, linked lists, formatted output, and file reading.
+### Compilation
 
-It is designed to:
-- Reinforce understanding of low-level programming concepts
-- Provide reusable, reliable utilities for future projects
-- Respect strict coding standards (42 norm)
-
----
-
-## Features
-
-### 1. Standard C Library Functions
-Reimplementation of commonly used libc functions:
-
-- Character checks:  
-  `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`
-
-- Case conversion:  
-  `ft_tolower`, `ft_toupper`
-
-- Memory management:  
-  `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`
-
-- String manipulation:  
-  `ft_strlen`, `ft_strdup`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strlcpy`, `ft_strlcat`, `ft_strnstr`
-
-- Conversion:  
-  `ft_atoi`, `ft_itoa`
-
----
-
-### 2. Additional String Utilities
-
-- `ft_substr`
-- `ft_strjoin`
-- `ft_strtrim`
-- `ft_split`
-- `ft_strmapi`
-- `ft_striteri`
-
----
-
-### 3. File Descriptor Output
-
-- `ft_putchar_fd`
-- `ft_putstr_fd`
-- `ft_putendl_fd`
-- `ft_putnbr_fd`
-
----
-
-### 4. Linked List API
-
-Custom implementation of a singly linked list:
-
-- `ft_lstnew`
-- `ft_lstadd_front`
-- `ft_lstadd_back`
-- `ft_lstsize`
-- `ft_lstlast`
-- `ft_lstdelone`
-- `ft_lstclear`
-- `ft_lstiter`
-- `ft_lstmap`
-
----
-
-### 5. ft_printf
-
-Custom implementation of the standard `printf` function.
-
-#### Supported conversions:
-- `%c` — character  
-- `%s` — string  
-- `%p` — pointer  
-- `%d`, `%i` — signed integers  
-- `%u` — unsigned integers  
-- `%x`, `%X` — hexadecimal  
-- `%%` — percent sign  
-
-#### Additional features:
-- File descriptor support via `ft_dprintf`
-- Modular internal printing functions
-
----
-
-### 6. get_next_line
-
-Function that reads a file descriptor line by line.
-
-#### Prototype:
-```c
-char *get_next_line(int fd);
+```bash
+make
 ````
 
-#### Behavior:
+This produces:
 
-* Returns one line per call (including newline if present)
-* Handles multiple file descriptors simultaneously
-* Uses a configurable buffer size
+```
+libft.a
+```
 
-#### Configuration:
+### Cleaning
+
+```bash
+make clean     # remove object files
+make fclean    # remove object files and library
+make re        # rebuild
+```
+
+### Usage
+
+Include the header:
+
+```c
+#include "libft.h"
+```
+
+Compile your program with:
+
+```bash
+gcc main.c -L. -lft
+```
+
+---
+
+## Resource
+
+### Project Structure
+
+```
+libft/
+├── ft_printf/
+├── ft_*.c
+├── gnl.c
+├── libft.h
+├── Makefile
+└── README.md
+```
+
+### Key Components
+
+#### Libc Functions
+
+Character checks, memory handling, string manipulation, and conversions.
+
+#### Linked List API
+
+Singly linked list utilities:
+`ft_lstnew`, `ft_lstadd_back`, `ft_lstclear`, etc.
+
+#### ft_printf
+
+Supports:
+
+* `%c`, `%s`, `%p`
+* `%d`, `%i`, `%u`
+* `%x`, `%X`
+* `%%`
+
+Includes `ft_dprintf` for file descriptor output.
+
+#### get_next_line
+
+```c
+char *get_next_line(int fd);
+```
+
+* Reads one line per call
+* Supports multiple file descriptors
+* Controlled via:
 
 ```c
 # define BUFFER_SIZE 42
@@ -119,82 +112,15 @@ char *get_next_line(int fd);
 
 ---
 
-## Installation
+### AI Usage
 
-Clone the repository:
+This project was developed with limited assistance from AI tools.
+AI was used for:
 
-```bash
-git clone https://github.com/your-username/libft.git
-cd libft
-```
+* Reviewing code quality and edge cases
+* Improving documentation clarity
 
-Compile the library:
-
-```bash
-make
-```
-
-This generates:
-
-```
-libft.a
-```
-
----
-
-## Usage
-
-Include the header in your project:
-
-```c
-#include "libft.h"
-```
-
-Compile with the library:
-
-```bash
-gcc main.c -L. -lft
-```
-
----
-
-## Makefile Rules
-
-* `make` — compile the library
-* `make clean` — remove object files
-* `make fclean` — remove object files and library
-* `make re` — rebuild everything
-
----
-
-## Project Structure
-
-```
-libft/
-├── ft_*.c
-├── ft_printf/
-├── gnl.c
-├── libft.h
-├── Makefile
-└── README.md
-```
-
----
-
-## Constraints
-
-* Written in C
-* No use of standard libc functions (except allowed ones)
-* Norm-compliant (42 coding standard)
-* Memory-safe (no leaks, no undefined behavior)
-
----
-
-## Notes
-
-* `BUFFER_SIZE` must be greater than 0 (compile-time value reset)
-* Supports multiple file descriptors up to `FD_MAX` (hard coded as macro)
-* Designed for reuse across all future 42 projects
+AI was not used to generate or copy implementation code directly. All logic and coding decisions were made and implemented by the project author.
 
 ---
 
@@ -202,5 +128,3 @@ libft/
 
 **todina-r**
 42 Antananarivo
-
----
