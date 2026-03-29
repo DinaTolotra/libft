@@ -1,155 +1,206 @@
 *This project has been created as part of the 42 curriculum by todina-r.*
 
-# LIBFT
+# Libft
 
-## Description
+Custom C standard library implementation developed as part of the 42 curriculum.  
+This project consolidates fundamental utilities, along with extended functionality including `ft_printf` and `get_next_line`.
 
-libft is a personal C library containing reimplementations of standard functions from the C library, as well as additional utility functions.
-The goal of this project is to gain a deeper understanding of C programming, memory management, and standard library behavior.
+---
 
-This library is intended to be used on Linux systems.
+## Overview
 
-### Function
+This library provides reimplementations of standard C functions, as well as additional tools for memory management, string manipulation, linked lists, formatted output, and file reading.
 
-#### Character classification (`ctype.h`)
+It is designed to:
+- Reinforce understanding of low-level programming concepts
+- Provide reusable, reliable utilities for future projects
+- Respect strict coding standards (42 norm)
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_isascii | int | Check if a value is a valid ASCII character |
-| ft_isalpha | int | Check if a character is alphabetic |
-| ft_isdigit | int | Check if a character is numeric |
-| ft_isalnum | int | Check if a character is alphanumeric |
-| ft_isprint | int | Check if a character is printable |
-| ft_toupper | int | Convert a lowercase character to uppercase |
-| ft_tolower | int | Convert an uppercase character to lowercase |
+---
 
-#### String manipulation (`string.h`)
+## Features
 
-##### Null-terminated strings
+### 1. Standard C Library Functions
+Reimplementation of commonly used libc functions:
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_strlen | int | Return the length of a string |
-| ft_strncmp | int | Compare two strings |
-| ft_strlcpy | int | Copy a string with size limitation |
-| ft_strlcat | int | Concatenate strings with size limitation |
-| ft_strdup | char * | Duplicate a string |
-| ft_strchr | char * | Locate first occurrence of a character |
-| ft_strrchar | char * | Locate last occurrence of a character |
+- Character checks:  
+  `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`
 
-##### Memory manipulation
+- Case conversion:  
+  `ft_tolower`, `ft_toupper`
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_bzero | void | Set a memory area to zero |
-| ft_strnstr | char * | Locate a substring |
-| ft_memset | void * | Fill memory with a constant byte |
-| ft_memchr | void * | Locate a byte in memory |
-| ft_memcmp | int | Compare memory areas |
-| ft_memcpy | void * | Copy memory area |
-| ft_memmove | void * | Copy memory area with overlap support |
+- Memory management:  
+  `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp`, `ft_calloc`
 
-#### Standard utilities (`stdlib.h`)
+- String manipulation:  
+  `ft_strlen`, `ft_strdup`, `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strlcpy`, `ft_strlcat`, `ft_strnstr`
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_calloc | void * | Allocate and zero-initialize memory |
-| ft_atoi | int | Convert string to integer |
+- Conversion:  
+  `ft_atoi`, `ft_itoa`
 
-#### Additional string utilities
+---
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_substr | char * | Extract a substring |
-| ft_strjoin | char * | Join two strings |
-| ft_strtrim | char * | Trim characters from a string |
-| ft_split | char ** | Split a string into an array |
-| ft_itoa | char * | Convert integer to string |
-| ft_strmapi | char * | Apply function to characters (new string) |
-| ft_striter | void | Apply function to characters (in place) |
+### 2. Additional String Utilities
 
-#### File descriptors
+- `ft_substr`
+- `ft_strjoin`
+- `ft_strtrim`
+- `ft_split`
+- `ft_strmapi`
+- `ft_striteri`
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_putchar_fd | void | Write a character to a file descriptor |
-| ft_putstr_fd | void | Write a string to a file descriptor |
-| ft_putendl_fd | void | Write a string followed by a newline |
-| ft_putnbr_fd | void | Write an integer to a file descriptor |
+---
 
-#### Linked lists
+### 3. File Descriptor Output
+
+- `ft_putchar_fd`
+- `ft_putstr_fd`
+- `ft_putendl_fd`
+- `ft_putnbr_fd`
+
+---
+
+### 4. Linked List API
+
+Custom implementation of a singly linked list:
+
+- `ft_lstnew`
+- `ft_lstadd_front`
+- `ft_lstadd_back`
+- `ft_lstsize`
+- `ft_lstlast`
+- `ft_lstdelone`
+- `ft_lstclear`
+- `ft_lstiter`
+- `ft_lstmap`
+
+---
+
+### 5. ft_printf
+
+Custom implementation of the standard `printf` function.
+
+#### Supported conversions:
+- `%c` — character  
+- `%s` — string  
+- `%p` — pointer  
+- `%d`, `%i` — signed integers  
+- `%u` — unsigned integers  
+- `%x`, `%X` — hexadecimal  
+- `%%` — percent sign  
+
+#### Additional features:
+- File descriptor support via `ft_dprintf`
+- Modular internal printing functions
+
+---
+
+### 6. get_next_line
+
+Function that reads a file descriptor line by line.
+
+#### Prototype:
+```c
+char *get_next_line(int fd);
+````
+
+#### Behavior:
+
+* Returns one line per call (including newline if present)
+* Handles multiple file descriptors simultaneously
+* Uses a configurable buffer size
+
+#### Configuration:
 
 ```c
-typedef struct s_list
-{
-	void            *content;
-	struct s_list   *next;
-}	t_list;
+# define BUFFER_SIZE 42
+# define FD_MAX 1024
 ```
 
-| Function | Return | Description |
-| :------- | :----: | :---------- |
-| ft_lstnew	| t_list * | Create a new list node |
-| ft_lstadd_front | void | Add node at the beginning |
-| ft_lstsize | int | Count list elements |
-| ft_lstlast | t_list * | Return last node |
-| ft_lstadd_back | void | Add node at the end |
-| ft_lstdelone | void | Delete a single node |
-| ft_lstclear | void | Delete all nodes |
-| ft_lstiter | void| Apply function to each node |
-| ft_lstmap | t_list * | Create new list from existing list |
+---
 
-## Instructions
-This project uses make.
+## Installation
 
-### Clone the repository
-```sh
-git clone git@vogsphere.42antananarivo.mg:vogsphere/intra-uuid-c81ca723-a115-4325-8f8c-65e6d60b47f5-7227654-todina-r libft
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/libft.git
 cd libft
 ```
 
-### Build the library
-```sh
+Compile the library:
+
+```bash
 make
-# or
-make all
-# or
-make libft.a
 ```
 
-### Clean object files
-```sh
-make clean
+This generates:
+
+```
+libft.a
 ```
 
-### Clean object files and library
-```sh
-make fclean
-```
+---
 
-### Rebuild
-```sh
-make re
-```
+## Usage
 
-### Usage example
-In your source code:
+Include the header in your project:
+
 ```c
 #include "libft.h"
 ```
 
-In your terminal:
-```sh
-cc -o <output> <source_file> -I<path_to_libft.h> -L<path_to_libft.a> -lft
+Compile with the library:
+
+```bash
+gcc main.c -L. -lft
 ```
 
-## Resources
+---
 
-### Documentation
- - atoi behavior: man strtol(3)
- - Printable characters: https://www.ascii-code.com/characters/printable-characters
- - strlcat documentation: https://pubs.opengroup.org/onlinepubs/9799919799/functions/strlcat.html
+## Makefile Rules
 
-### AI
- - Proof reading for README
- - unit test code review during testing
+* `make` — compile the library
+* `make clean` — remove object files
+* `make fclean` — remove object files and library
+* `make re` — rebuild everything
+
+---
+
+## Project Structure
+
+```
+libft/
+├── ft_*.c
+├── ft_printf/
+├── gnl.c
+├── libft.h
+├── Makefile
+└── README.md
+```
+
+---
+
+## Constraints
+
+* Written in C
+* No use of standard libc functions (except allowed ones)
+* Norm-compliant (42 coding standard)
+* Memory-safe (no leaks, no undefined behavior)
+
+---
+
+## Notes
+
+* `BUFFER_SIZE` must be greater than 0 (compile-time value reset)
+* Supports multiple file descriptors up to `FD_MAX` (hard coded as macro)
+* Designed for reuse across all future 42 projects
+
+---
+
+## Author
+
+**todina-r**
+42 Antananarivo
+
+---
