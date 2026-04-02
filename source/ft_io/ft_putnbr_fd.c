@@ -12,22 +12,29 @@
 
 #include "libft.h"
 
-static void	_putnbr_fd_rec(long lnb, int fd)
+static int	_putnbr_fd_rec(long lnb, int fd)
 {
+	int	count;
+
+	count = 0;
 	if (lnb >= 10)
-		_putnbr_fd_rec(lnb / 10, fd);
-	ft_putchar_fd((lnb % 10) + '0', fd);
+		count += _putnbr_fd_rec(lnb / 10, fd);
+	count += ft_putchar_fd((lnb % 10) + '0', fd);
+	return (count);
 }
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_putnbr_fd(int n, int fd)
 {
 	long	lnb;
+	int		count;
 
 	lnb = n;
+	count = 0;
 	if (lnb < 0)
 	{
 		lnb = -lnb;
-		ft_putchar_fd('-', fd);
+		count += ft_putchar_fd('-', fd);
 	}
-	_putnbr_fd_rec(lnb, fd);
+	count += _putnbr_fd_rec(lnb, fd);
+	return (count);
 }

@@ -71,7 +71,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
+int		ft_putnbr_fd(int n, int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -91,6 +91,7 @@ int		ft_print_str_l(int fd, va_list list);
 int		ft_print_ptr_l(int fd, va_list list);
 int		ft_print_int_l(int fd, va_list list);
 int		ft_print_uint_l(int fd, va_list list);
+int		ft_print_float_l(int fd, va_list list);
 int		ft_print_lhex_l(int fd, va_list list);
 int		ft_print_uhex_l(int fd, va_list list);
 

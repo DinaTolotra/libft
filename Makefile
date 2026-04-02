@@ -54,6 +54,7 @@ SRCS =  \
 	$(SOURCE)/ft_io/ft_print_ptr_l.c\
 	$(SOURCE)/ft_io/ft_print_int_l.c\
 	$(SOURCE)/ft_io/ft_print_uint_l.c\
+	$(SOURCE)/ft_io/ft_print_float_l.c\
 	$(SOURCE)/ft_io/ft_print_lhex_l.c\
 	$(SOURCE)/ft_io/ft_print_uhex_l.c\
 	$(SOURCE)/ft_io/ft_dprintf.c\

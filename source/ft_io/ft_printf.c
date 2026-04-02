@@ -57,6 +57,8 @@ static int	handle_conv(int fd, char c, va_list list)
 		return (ft_print_int_l(fd, list));
 	else if (c == 'u')
 		return (ft_print_uint_l(fd, list));
+	else if (c == 'f')
+		return (ft_print_float_l(fd, list));
 	else if (c == 'x')
 		return (ft_print_lhex_l(fd, list));
 	else if (c == 'X')
